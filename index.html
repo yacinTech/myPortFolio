@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ملفي الشخصي</title>
+  <link rel="icon" type="image/png" href="téléchargement.png" />
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("mNsWbXufMLEbq4rdp"); // استبدل بـ Public Key من حسابك
+    })();
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#home" id="nav-home">الرئيسية</a></li>
+        <li><a href="#about" id="nav-about">نبذة عني</a></li>
+        <li><a href="#projects" id="nav-projects">مشاريعي</a></li>
+        <li><a href="#contact" id="nav-contact">تواصل معي</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button onclick="switchLanguage('ar')">Ar</button>
+        <button onclick="switchLanguage('fr')">Fr</button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <img src="photoprofil.jpg" alt="صورتي الشخصية" class="profile-img" />
+      <div class="intro-text">
+        <h1 id="intro-title">مرحبًا، أنا  ياسين المعطاوي</h1>
+        <p id="intro-desc">أنا مطوّر Full Stack متخصص في تقنيات MERN (MongoDB, Express.js, React, Node.js)، أمتلك شغفًا ببناء تطبيقات ويب حديثة وعالية الأداء. أتمتع بقدرة على تحويل الأفكار إلى حلول رقمية متكاملة، من الواجهة الأمامية الجذابة إلى الخلفية القوية والآمنة. أسعى دائمًا لتقديم تجارب مستخدم متميزة وكود نظيف وقابل للتطوير. كما أواكب باستمرار أحدث التقنيات في عالم تطوير الويب لأضمن جودة وفعالية المشاريع التي أعمل عليها.</p>
+      </div>
+    </div>
+  </section>
+ 
+  
+
+  <section id="projects" class="projects-section">
+    <h2 id="projects-title">مشاريعي</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>مجلة الكترونية</h3>
+        <p> يعرض مقالات في شتى المجالات الثقافية في الفكر والعلوم والفن</p>
+        <a href="https://frontendmagazineofknowldgg.vercel.app/" target="_blank">عرض المشروع</a>
+      </div>
+      <div class="project-card">
+        <h3>موقع متجر</h3>
+        <p>واجهة متجر باستخدام React</p>
+        <a href="https://frontendmagazineofknowldgg.vercel.app/" target="_blank">عرض المشروع</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hire">
+    <h2 id="hire-title">هل ترغب بالعمل معي؟</h2>
+    <p id="hire-desc">أنا مستعد لتنفيذ مشاريعك الشخصية أو العمل معك كمطور مستقل، فقط تواصل معي عبر النموذج أدناه.</p>
+  
+    <form class="contact-form">
+      <input type="text" id="name" placeholder="الاسم الكامل" required />
+      <input type="tel" id="phone" placeholder="رقم الهاتف" required />
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+      <textarea id="message" placeholder="اكتب رسالتك هنا..." ></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2 id="contact-title">تواصل معي</h2>
+    <div class="social-links">
+        <a href="index.html" target="_blank"><i class="fas fa-globe"></i> موقعي</a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/yacinTech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:yassinelmaataoui24@gmail.com"><i class="fas fa-envelope"></i> البريد</a>
+      </div>
+      
+  </section>
+
+  <footer>
+    <p id="footer-text">© 2025 جميع الحقوق محفوظة.</p>
+  </footer>
+
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
