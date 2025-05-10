@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>ملفي الشخصي</title>
+  <title>ياسين المعطاوي Yassine El Maataoui</title>
   <link rel="icon" type="image/png" href="téléchargement.png" />
 
 
@@ -14,6 +14,9 @@
   </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- إضافة Font Awesome لأيقونات التواصل -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
@@ -22,19 +25,25 @@
 
   <header>
     <nav class="navbar">
-      <ul class="nav-links">
+      <!-- زر القائمة على اليسار -->
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      
+      <!-- الروابط (القائمة) -->
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home" id="nav-home">الرئيسية</a></li>
         <li><a href="#about" id="nav-about">نبذة عني</a></li>
         <li><a href="#projects" id="nav-projects">مشاريعي</a></li>
         <li><a href="#contact" id="nav-contact">تواصل معي</a></li>
       </ul>
+  
+      <!-- أزرار تبديل اللغة على اليمين -->
       <div class="lang-switch">
         <button onclick="switchLanguage('ar')">Ar</button>
         <button onclick="switchLanguage('fr')">Fr</button>
       </div>
     </nav>
   </header>
-
+  
   <section id="home" class="home-section">
     <div class="home-content">
       <img src="photoprofil.jpg" alt="صورتي الشخصية" class="profile-img" />
@@ -75,17 +84,24 @@
       <button type="submit">إرسال</button>
     </form>
   </section>
-
   <section id="contact" class="contact-section">
     <h2 id="contact-title">تواصل معي</h2>
     <div class="social-links">
-        <a href="index.html" target="_blank"><i class="fas fa-globe"></i> موقعي</a>
-        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/yacinTech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="mailto:yassinelmaataoui24@gmail.com"><i class="fas fa-envelope"></i> البريد</a>
-      </div>
-      
+      <a href="index.html" target="_blank" id="website-link">
+        <i class="fas fa-globe"></i> موقعي
+      </a>
+      <a href="https://linkedin.com/" target="_blank" id="linkedin-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/yacinTech" target="_blank" id="github-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:yassinelmaataoui24@gmail.com" id="email-link">
+        <i class="fas fa-envelope"></i> البريد
+      </a>
+    </div>
   </section>
+  
 
   <footer>
     <p id="footer-text">© 2025 جميع الحقوق محفوظة.</p>
