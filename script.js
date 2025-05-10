@@ -52,7 +52,7 @@ const content = {
     document.getElementById("projects-title").textContent = data.projectsTitle;
     document.getElementById("contact-title").textContent = data.contactTitle;
     document.getElementById("footer-text").textContent = data.footer;
-
+  
     document.getElementById("hire-title").textContent = data.hireTitle;
     document.getElementById("hire-desc").textContent = data.hireDesc;
     document.getElementById("name").placeholder = data.placeholderName;
@@ -60,9 +60,14 @@ const content = {
     document.getElementById("email").placeholder = data.placeholderEmail;
     document.getElementById("message").placeholder = data.placeholderMessage;
     document.querySelector(".contact-form button").textContent = data.sendButton;
-
+  
+    // تحديث الروابط الاجتماعية بناءً على اللغة
+    document.getElementById("website-link").textContent = lang === 'fr' ? "Mon site" : "موقعي";
+    document.getElementById("linkedin-link").textContent = lang === 'fr' ? "LinkedIn" : "LinkedIn";
+    document.getElementById("github-link").textContent = lang === 'fr' ? "GitHub" : "GitHub";
+    document.getElementById("email-link").textContent = lang === 'fr' ? "Email" : "البريد";
   }
-
+  
   
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -107,3 +112,20 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+  
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
+  });
+
+  // إغلاق القائمة عند الضغط على أي رابط
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuToggle.textContent = '☰';
+    });
+  });
