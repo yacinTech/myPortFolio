@@ -16,6 +16,19 @@ const content = {
         placeholderEmail: "البريد الإلكتروني",
         placeholderMessage: "اكتب رسالتك هنا...",
         sendButton: "إرسال",
+
+        projects: [
+          {
+            title: "مجلة الكترونية",
+            desc: "يعرض مقالات في شتى المجالات الثقافية في الفكر والعلوم والفن",
+            linkText: "عرض المشروع"
+          },
+          {
+            title: "موقع متجر",
+            desc: "واجهة متجر باستخدام React",
+            linkText: "عرض المشروع"
+          }
+        ]
     },
     fr: {
       dir: "ltr",
@@ -33,6 +46,19 @@ const content = {
       placeholderEmail: "Adresse e-mail",
       placeholderMessage: "Écrivez votre message ici...",
       sendButton: "Envoyer",
+
+      projects: [
+        {
+          title: "Magazine électronique",
+          desc: "Présente des articles dans divers domaines culturels tels que la pensée, la science et l'art.",
+          linkText: "Voir le projet"
+        },
+        {
+          title: "Site e-commerce",
+          desc: "Interface de boutique développée avec React",
+          linkText: "Voir le projet"
+        }
+      ]
     },
   };
   
@@ -62,10 +88,25 @@ const content = {
     document.querySelector(".contact-form button").textContent = data.sendButton;
   
     // تحديث الروابط الاجتماعية بناءً على اللغة
-    document.getElementById("website-link").textContent = lang === 'fr' ? "Mon site" : "موقعي";
-    document.getElementById("linkedin-link").textContent = lang === 'fr' ? "LinkedIn" : "LinkedIn";
-    document.getElementById("github-link").textContent = lang === 'fr' ? "GitHub" : "GitHub";
-    document.getElementById("email-link").textContent = lang === 'fr' ? "Email" : "البريد";
+    document.getElementById("website-link").innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fr' ? "Mon site" : "موقعي"}`;
+    document.getElementById("linkedin-link").innerHTML = `<i class="fab fa-linkedin"></i> LinkedIn`;
+    document.getElementById("github-link").innerHTML = `<i class="fab fa-github"></i> GitHub`;
+    document.getElementById("email-link").innerHTML = `<i class="fas fa-envelope"></i> ${lang === 'fr' ? "Email" : "البريد"}`;
+    
+
+    // تحديث عنوان قسم المشاريع
+document.getElementById("projects-title").textContent = data.projectsTitle;
+
+// تحديث محتوى كل مشروع
+const projectCards = document.querySelectorAll(".project-card");
+data.projects.forEach((project, index) => {
+  if (projectCards[index]) {
+    projectCards[index].querySelector("h3").textContent = project.title;
+    projectCards[index].querySelector("p").textContent = project.desc;
+    projectCards[index].querySelector("a").textContent = project.linkText;
+  }
+});
+
   }
   
   
