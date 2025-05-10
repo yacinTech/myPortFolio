@@ -300,3 +300,11 @@ media screen and (max-width: 600px) {
     font-size: 8px;
   }
 }
+
+@media (max-width: 600px) {
+  .lang-switch button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 0 5px;
+  }
+}
