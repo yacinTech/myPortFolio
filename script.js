@@ -23,6 +23,12 @@ const content = {
             desc: "يعرض مقالات في شتى المجالات الثقافية في الفكر والعلوم والفن",
             linkText: "عرض المشروع"
           },
+            {
+            title: "موقع لمؤسسة بحثية",
+            desc: "للتعريف بمؤسسة آفاق اكاديمية وخدماتها البحثية المتميزة",
+            linkText: "عرض المشروع"
+          },
+
           {
             title: "موقع متجر",
             desc: "واجهة متجر باستخدام React",
@@ -53,6 +59,12 @@ const content = {
           desc: "Présente des articles dans divers domaines culturels tels que la pensée, la science et l'art.",
           linkText: "Voir le projet"
         },
+        {
+          title: "Site pour une institution de recherche",
+          desc: "Pour présenter l'institution Afak Académique et ses services de recherche de qualité",
+          linkText: "Voir le projet"
+        },
+
         {
           title: "Site e-commerce",
           desc: "Interface de boutique développée avec React",
